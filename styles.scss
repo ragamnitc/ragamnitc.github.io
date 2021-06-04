@@ -1,0 +1,259 @@
+*{
+	margin: 0;
+}
+.the-neon-sign {
+	border: 5px #fff solid;
+	border-radius: 7px;
+	box-shadow: 0 0 10px #ff18a7, 0 0 10px #ff18a7 inset, 0 0 30px #ff18a7,
+		0 0 30px #ff18a7 inset;
+	margin-top: 3rem;
+	position: relative;
+	width: 150px;
+	height: 130px;
+}
+.link{
+	position: absolute;
+	bottom: 0;
+}
+.cr-neon {
+	user-select: none;
+	$pink: #ff18a7;
+	font-size: 4rem;
+	font-family: "Metrophobic", sans-serif;
+	color: rgba(255, 255, 255, 0.75);
+	text-shadow: -2px 2px 0px $pink, -2px -2px 0px $pink, 2px 2px 0px $pink,
+		2px -2px 0px $pink, 0px 0px 5px $pink, 0px 0px 20px $pink, 0px 0px 30px $pink,
+		0px 0px 120px $pink, 0px 0px 130px $pink;
+	animation: 12s cr-neon-pink infinite;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	.cr-neon-sub {
+		$green: #94f701;
+		color: rgba(255, 255, 255, 0.6);
+		text-shadow: -2px 2px 0px $green, -2px -2px 0px $green, 2px 2px 0px $green,
+			2px -2px 0px $green, 0px 0px 5px $green, 0px 0px 20px $green,
+			0px 0px 30px $green, 0px 0px 120px $green, 0px 0px 130px $green;
+		position: absolute;
+		top: 60px;
+		left: 100px;
+		transform: rotate(-10deg);
+		font-size: 3rem;
+		animation: 10s cr-neon-green infinite;
+	}
+	.cr-neon-sub-link {
+		$green: #94f701;
+		color: rgba(255, 255, 255, 0.6);
+		text-shadow: -2px 2px 0px $green, -2px -2px 0px $green, 2px 2px 0px $green,
+			2px -2px 0px $green, 0px 0px 5px $green, 0px 0px 20px $green,
+			0px 0px 30px $green, 0px 0px 120px $green, 0px 0px 130px $green;
+
+		//transform: rotate(-10deg);
+		font-size: 2.5rem;
+		transform: scale(0.5);
+		animation: 10s cr-neon-green infinite;
+		animation-delay: 1s;
+	}
+	/*
+	 *	Do we like this? No.. is it for the better good?
+	 *	yes.
+	 */
+	&.screen-mid {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 200px;
+	}
+}
+a{
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 0.5em;
+	
+}
+.links{
+	position: absolute;
+	bottom: 3vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	column-gap: 0;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
+}
+.delay{
+	animation-delay: 1s;
+}
+.the-neon-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	.the-neon-info {
+		font-family: "Roboto", sans-serif;
+		text-align: center;
+
+		h3 {
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 2rem;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			color: #b1b1e3;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+@keyframes cr-neon-green {
+	$green: #94f701;
+	$green-dark: #021c07;
+
+	$off: -2px 2px 0px $green-dark, -2px -2px 0px $green-dark,
+		2px 2px 0px $green-dark, 2px -2px 0px $green-dark, 0px 0px 5px $green-dark,
+		0px 0px 20px $green-dark, 0px 0px 30px $green-dark, 0px 0px 120px $green-dark,
+		0px 0px 130px $green-dark;
+	$on: -2px 2px 0px $green, -2px -2px 0px $green, 2px 2px 0px $green,
+		2px -2px 0px $green, 0px 0px 5px $green, 0px 0px 20px $green,
+		0px 0px 30px $green, 0px 0px 120px $green, 0px 0px 130px $green;
+	$on-bright: -2px 2px 10px $green, -2px -2px 10px $green, 2px 2px 10px $green,
+		2px -2px 10px $green, 0px 0px 5px $green, 0px 0px 5px $green,
+		0px 0px 20px $green, 0px 0px 20px $green, 0px 0px 30px $green,
+		0px 0px 120px $green, 0px 0px 130px $green;
+	0% {
+		text-shadow: $off;
+	}
+	2% {
+		text-shadow: $on;
+	}
+	2.5% {
+		text-shadow: $off;
+	}
+	3% {
+		text-shadow: $on;
+	}
+	4% {
+		text-shadow: $off;
+	}
+	4.5% {
+		text-shadow: $on;
+	}
+	10% {
+		text-shadow: $on;
+	}
+	10.5% {
+		text-shadow: $off;
+	}
+	11% {
+		text-shadow: $on;
+	}
+	51% {
+		text-shadow: $on;
+	}
+	52% {
+		text-shadow: $off;
+	}
+	55% {
+		text-shadow: $off;
+	}
+	55.5% {
+		text-shadow: $on;
+	}
+	85% {
+		text-shadow: $on;
+	}
+	85.5% {
+		text-shadow: $off;
+	}
+	86% {
+		text-shadow: $on;
+	}
+}
+
+@keyframes cr-neon-pink {
+	$pink: #ff18a7;
+	$pink-dark: #1f021a;
+
+	$off: -2px 2px 0px $pink-dark, -2px -2px 0px $pink-dark, 2px 2px 0px $pink-dark,
+		2px -2px 0px $pink-dark, 0px 0px 5px $pink-dark, 0px 0px 20px $pink-dark,
+		0px 0px 30px $pink-dark, 0px 0px 120px $pink-dark, 0px 0px 130px $pink-dark;
+	$on: -2px 2px 0px $pink, -2px -2px 0px $pink, 2px 2px 0px $pink,
+		2px -2px 0px $pink, 0px 0px 5px $pink, 0px 0px 20px $pink, 0px 0px 30px $pink,
+		0px 0px 120px $pink, 0px 0px 130px $pink;
+
+	0% {
+		text-shadow: $off;
+	}
+	1% {
+		text-shadow: $on;
+	}
+	3% {
+		text-shadow: $off;
+	}
+	3.5% {
+		text-shadow: $on;
+	}
+	4.5% {
+		text-shadow: $off;
+	}
+	5% {
+		text-shadow: $on;
+	}
+	20% {
+		text-shadow: $on;
+	}
+	20.5% {
+		text-shadow: $off;
+	}
+	21% {
+		text-shadow: $on;
+	}
+	31% {
+		text-shadow: $on;
+	}
+	32% {
+		text-shadow: $off;
+	}
+	45% {
+		text-shadow: $off;
+	}
+	45.5% {
+		text-shadow: $on;
+	}
+	65% {
+		text-shadow: $on;
+	}
+	65.5% {
+		text-shadow: $off;
+	}
+	66% {
+		text-shadow: $on;
+	}
+}
+
+body,
+html {
+	background: #000017;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+svg {
+	width: 100%;
+	height: 100vh;
+	opacity: 0.4;
+}
+.Logos{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 10vh;
+}
